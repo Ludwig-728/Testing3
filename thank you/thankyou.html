@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bg.css">
+    <script src="script1.js" defer></script>
+    <title>iloveyou</title>
+</head>
+<body>
+    <div class="text" style="top: -50px;">
+        <h1>Because they're able to make a cutie pie <3</h1>
+    </div>
+    
+    <div class="container">
+        <div class="rains" id="rains-container">
+        </div>
+    </div>
+    
+    <script>
+        function createRaindrops() {
+            const container = document.getElementById("rains-container");
+            const numRaindrops = 60; 
+            
+            for (let i = 0; i < numRaindrops; i++) {
+                const span = document.createElement("span");
+                span.style.setProperty("--i", Math.floor(Math.random() * 20) + 1); 
+                container.appendChild(span);
+            }
+        }
+        createRaindrops(); 
+    </script>
+
+</body>
+</html>
